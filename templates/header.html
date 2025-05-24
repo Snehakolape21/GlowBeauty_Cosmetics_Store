@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowBeauty</title>
+    
+</head>
+<body>
+    <header>
+    <div class="logo">GlowBeauty</div> 
+    <nav>
+      <a href="/"><b>Home</b></a> 
+      <div class="dropdown">
+        <button class="dropbtn">Categories<span class="arrow" style="font-size: 1.5rem;">▾</span></button>
+        <div class="dropdown-content" style="width: 200px;">
+          <a href="/filter-by-cat/facewash">Face Wash</a> 
+          <a href="/filter-by-cat/serum">Serums</a> 
+          <a href="/filter-by-cat/sunscreen">Sunscreen</a>   
+          
+        </div>
+      </div>
+     {% if request.user.is_authenticated %} 
+      <a href="/showmycart"><b>Cart</b></a> 
+      {% endif %}    
+      {% if not request.user.is_authenticated %}
+      <a href="/register"><b>Register</b></a> 
+      <a href="/login"><b>Login</b></a>
+     {% endif %}
+     
+      <a href="/myorder"><b>MyOrder</b></a>
+
+      <a href="/aboutus"><b>About</b></a>
+      <a href="/contactus"><b>Contact</b></a>  
+      {% if request.user.is_authenticated %} 
+      <a href="/logout">Logout</a>
+       {% endif %}  
+     
+
+     
+    </nav>
+  </header>
+</body>
+</html>

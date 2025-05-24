@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="container my-5">
+    <h2 class="text-center mb-5">🛒 Confirm Your Order</h2>
+
+    {% if mycart %}
+    <div class="row">
+        <!-- Product List -->
+        <div class="col-lg-8">
+            {% for cart in mycart %}
+            <div class="card mb-4 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4 text-center p-3">
+                        <img src="{{ cart.productid.image.url }}" class="img-fluid rounded" alt="{{ cart.productid.name }}" style="max-height: 180px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cart.productid.name }}</h5>
+                            <p class="card-text text-muted">{{ cart.productid.description }}</p>
+                            <p class="mb-1"><strong>Price:</strong> ₹{{ cart.productid.price }}</p>
+                            <p class="mb-1"><strong>Quantity:</strong> {{ cart.quantity }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Summary Card -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm p-4 text-center">
+                <h5 class="mb-3">💰 Price Details ({{ count }} items)</h5>
+                <hr>
+                <p><strong>Total Amount:</strong></p>
+                <h4 class="text-success mb-4">₹{{ totalbill }}</h4>
+                <div class="d-grid gap-2">
+                    <a href="/showmycart" class="btn btn-outline-secondary">← Back to Cart</a> 
+                    <a href="/placeorder" class="btn btn-success">Place Order</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info text-center">Your cart is empty.</div> 
+    {% endif %}
+</div>
+
+{% endblock %}

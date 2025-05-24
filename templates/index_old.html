@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlowBeauty - Cosmetics Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+
+  <style>
+    html {
+      scroll-behavior: smooth; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header --> 
+  <header>
+    <div class="logo">GlowBeauty</div> 
+    <nav>
+      <a href="#"><b>Home</b></a>
+      <div class="dropdown">
+        <button class="dropbtn">Categories<span class="arrow">▾</span></button>
+        <div class="dropdown-content" style="width: 200px;">
+          <a href="#lipstick">Lipsticks</a>
+          <a href="#serum">Serums</a>
+          <a href="#hairserum">Hair Serums</a>
+        </div>
+      </div>
+      <a href="#"><b>About</b></a>
+      <a href="#"><b>Contact</b></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="carousal">
+     <section class="hero">
+    <div class="hero-content">
+      <h1>Glow Starts With You</h1>
+      <p>Discover premium beauty products, crafted with care.</p>
+      <a href="#lipstick" class="btn">Shop Now</a>
+    </div>
+  </section>
+  </div>
+ 
+
+  <!-- Lipstick Category -->
+   <div class="row">
+    <section class="category-section" id="lipstick">
+      <h2>All Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x300" alt="Lipstick 1">
+          <h4>Velvet Matte</h4>
+          <p>₹799</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/250x300" alt="Lipstick 2">
+          <h4>Glossy Pink</h4>
+          <p>₹899</p>
+        </div>
+      </div>
+    </section>
+   </div>
+    
+  <section id="lipstick" class="category-section">
+        <h2>Best seller</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Lipstick 1">
+        <h4>Velvet Matte</h4>
+        <p>₹799</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Lipstick 2">
+        <h4>Glossy Pink</h4>
+        <p>₹899</p>
+      </div>
+    </div>
+  </section> 
+
+  <!-- Serum Category --> 
+    
+  <!-- <section id="serum" class="category-section">
+    <h2>Face Care</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Serum 1">
+        <h4>Glow Boost</h4>
+        <p>₹1299</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Serum 2">
+        <h4>Vitamin C</h4> 
+        <p>₹1499</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Hair Serum Category -->
+  <!-- <section id="hairserum" class="category-section">
+    <h2>Hair Care</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Hair Serum 1">
+        <h4>Anti-Frizz Serum</h4>
+        <p>₹1099</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x300" alt="Hair Serum 2">
+        <h4>Keratin Booster</h4>
+        <p>₹1399</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GlowBeauty. All rights reserved.</p>
+  </footer>
+</body>
+</html>

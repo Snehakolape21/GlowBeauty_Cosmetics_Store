@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content"> 
+    <h1 class="text-4xl md:text-5xl font-bold text-pink-700 mb-4">Glow Starts With You</h1>
+    <p>Discover hand-picked cosmetics for your natural beauty</p>
+    <a href="#products" class="btn"> 🛍️ Shop Now</a>  
+  </div> 
+</section> 
+
+
+
+ <!-- All Products -->
+<section class="category-section" id="products">   
+  <h2>Best Seller</h2> 
+  <div class="product-grid">
+    {% for product in products %}
+      <div class="product-card">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}"> 
+        <h4>{{ product.name }}</h4>
+         <p>{{ product.description }}</p>
+        <p>{{ product.type }}</p>
+
+        <p>₹{{ product.price }}</p>
+        <a href="/addtocart/{{product.id}}">Add to cart</a>  
+      </div>
+    {% endfor %}  
+  </div>
+</section> 
+
+
+
+{% endblock %}

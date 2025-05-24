@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="container my-5">
+    <h2 class="mb-4">📦 My Orders</h2>
+
+    {% if orders %}
+        {% for order in orders %}
+            <div class="card mb-3 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-4 p-3 text-center">
+                        <img src="{{ order.productid.image.url }}" alt="{{ order.productid.name }}" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ order.productid.name }}</h5>
+                            <p class="card-text">Price: ₹{{ order.productid.price }}</p>
+                            <p class="card-text">Quantity: {{ order.quantity }}</p>
+                            <p class="card-text">Order ID: <strong>{{ order.orderid }}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-info">You have not placed any orders yet.</div>
+    {% endif %}
+</div>
+
+
+{% endblock %}
