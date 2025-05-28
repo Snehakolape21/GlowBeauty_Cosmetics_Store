@@ -24,7 +24,7 @@
      {% if request.user.is_authenticated %} 
       <a href="/showmycart"><b>Cart</b></a> 
       {% endif %}    
-      {% if not request.user.is_authenticated %}
+      {% if not request.user.is_authenticated %} 
       <a href="/register"><b>Register</b></a> 
       <a href="/login"><b>Login</b></a>
      {% endif %}

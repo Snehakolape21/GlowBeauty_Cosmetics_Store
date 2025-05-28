@@ -17,6 +17,12 @@
                             <p class="card-text">Price: ₹{{ order.productid.price }}</p>
                             <p class="card-text">Quantity: {{ order.quantity }}</p>
                             <p class="card-text">Order ID: <strong>{{ order.orderid }}</strong></p>
+
+                            {# NEW — order-status badge #}
+                            <p class="card-text">
+                                Status:
+                                <span class="badge bg-info text-dark">{{ order.status }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -26,6 +32,5 @@
         <div class="alert alert-info">You have not placed any orders yet.</div>
     {% endif %}
 </div>
-
 
 {% endblock %}

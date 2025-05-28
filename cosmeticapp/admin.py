@@ -9,6 +9,7 @@ class ProductAdmin(admin.ModelAdmin):
 class OrderAdmin(admin.ModelAdmin):
     list_display=['id','orderid', 'userid', 'productid', 'quantity', 'order_date']
     list_filter=['userid', 'productid'] 
+    search_fields = ['orderid', 'userid__username']
     
 class CartAdmin(admin.ModelAdmin):
     list_display=['id', 'uid', 'productid', 'quantity']

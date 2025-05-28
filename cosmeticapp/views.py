@@ -109,10 +109,10 @@ def showMyCart(request):
     count = len(myCart)
     totalbill =  0  
     for cart in myCart: 
-        totalbill += cart.productid.price * cart.quantity   
+        totalbill += cart.productid.price * cart.quantity    
     context['count'] = count 
     context['totalbill'] = totalbill   
-    return render(request,'addtocart.html',context)  
+    return render(request,'addtocart.html',context)   
 
 
 def removecart(request,cartid):
@@ -143,7 +143,7 @@ def confirmorder(request) :
         totalbill += cart.productid.price * cart.quantity
     context['count'] = count
     context['totalbill'] = totalbill
-    return render(request,'confirmorder.html',context)
+    return render(request,'confirmorder.html',context) 
 
 def makepayment(request):
     userid = request.user.id 
@@ -181,7 +181,7 @@ def placeorder(request):
             productid=cart.productid,
             quantity=cart.quantity
         )
-        total += cart.productid.price * cart.quantity
+        total += cart.productid.price * cart.quantity 
 
     cartlist.delete()
 

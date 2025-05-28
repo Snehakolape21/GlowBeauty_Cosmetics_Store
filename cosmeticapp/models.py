@@ -15,7 +15,9 @@ class Order(models.Model):
     userid = models.ForeignKey(User, on_delete=models.CASCADE,default='')
     productid = models.ForeignKey(product, on_delete=models.CASCADE) 
     quantity = models.IntegerField(default=1)
-    order_date = models.DateTimeField(auto_now_add=True)  
+    order_date = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=100, default='Pending')
+
     
     
 
