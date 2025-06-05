@@ -9,6 +9,8 @@ GlowBeauty is a modern and fully functional cosmetics e-commerce platform built 
 ![Image](https://github.com/user-attachments/assets/150a9984-dbf7-43e5-a27f-174e6914ec75)
 
 🛒 Shopping Cart: Add/remove products to cart dynamically.
+![Image](https://github.com/user-attachments/assets/85d7c062-a2ee-44f3-987d-a1f805cf003d)
+
 
 👛 Checkout: View total bill, place an order, and proceed to payment.
 
