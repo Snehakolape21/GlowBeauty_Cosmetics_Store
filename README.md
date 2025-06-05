@@ -1,4 +1,4 @@
-💄 GlowBeauty – Cosmetics E-commerce Website
+GlowBeauty – Cosmetics E-commerce Website
 GlowBeauty is a modern and fully functional cosmetics e-commerce platform built using Django. The site allows users to browse beauty products, add them to cart, place orders, and complete payments securely via Razorpay.
 
 👉 [View Live Project](http://snehakolape.pythonanywhere.com/)
