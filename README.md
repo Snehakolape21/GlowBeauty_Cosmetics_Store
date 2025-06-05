@@ -14,7 +14,9 @@ GlowBeauty is a modern and fully functional cosmetics e-commerce platform built 
 
 👛 Checkout: View total bill, place an order, and proceed to payment.
 
+
 💳 Razorpay Integration: Seamless and secure payment for purchases.
+![Image](https://github.com/user-attachments/assets/4d0ac6fb-c386-4e61-95f7-3e63b9f7a384)
 
 📦 Order Management: Admin can view placed orders.
 
